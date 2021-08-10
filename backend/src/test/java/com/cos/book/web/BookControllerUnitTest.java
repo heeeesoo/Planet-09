@@ -44,9 +44,9 @@ public class BookControllerUnitTest {
 	@Test
 	public void save_테스트() throws Exception {
 		// given (테스트를 하기 위한 준비)
-		Book book = new Book(null, "스프링 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1");
+		Book book = new Book(null, "스프링 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2");
 		String content = new ObjectMapper().writeValueAsString(book);
-		when(bookService.저장하기(book)).thenReturn(new Book(1L, "스프링 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
+		when(bookService.저장하기(book)).thenReturn(new Book(1L, "스프링 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
 
 		// when (테스트 실행)
 		ResultActions resultAction = mockMvc.perform(post("/book").contentType(MediaType.APPLICATION_JSON_UTF8)
@@ -61,8 +61,8 @@ public class BookControllerUnitTest {
 	public void findAll_테스트() throws Exception {
 		// given
 		List<Book> books = new ArrayList<>();
-		books.add(new Book(1L, "스프링부트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
-		books.add(new Book(2L, "리엑트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
+		books.add(new Book(1L, "스프링부트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
+		books.add(new Book(2L, "리엑트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
 		when(bookService.모두가져오기()).thenReturn(books);
 
 		// when
@@ -77,7 +77,7 @@ public class BookControllerUnitTest {
 	public void findById_테스트() throws Exception {
 		// given
 		Long id = 1L;
-		when(bookService.한건가져오기(id)).thenReturn(new Book(1L, "자바 공부하기", "쌀","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
+		when(bookService.한건가져오기(id)).thenReturn(new Book(1L, "자바 공부하기", "쌀","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
 
 		// when
 		ResultActions resultAction = mockMvc.perform(get("/book/{id}", id).accept(MediaType.APPLICATION_JSON_UTF8));
@@ -91,10 +91,10 @@ public class BookControllerUnitTest {
 	public void update_테스트() throws Exception {
 		// given
 		Long id = 1L;
-		Book book = new Book(null, "C++ 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1");
+		Book book = new Book(null, "C++ 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2");
 		String content = new ObjectMapper().writeValueAsString(book);
 
-		when(bookService.수정하기(id, book)).thenReturn(new Book(1L, "C++ 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
+		when(bookService.수정하기(id, book)).thenReturn(new Book(1L, "C++ 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
 
 		// when
 		ResultActions resultAction = mockMvc.perform(put("/book/{id}", id).contentType(MediaType.APPLICATION_JSON_UTF8)

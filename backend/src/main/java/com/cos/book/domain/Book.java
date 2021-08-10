@@ -28,5 +28,5 @@ public class Book {
 	private String bank; //입금은행
 	private String account; //계좌번호
 	private String url; //사진url
-	
+	private String price; //가격
 }

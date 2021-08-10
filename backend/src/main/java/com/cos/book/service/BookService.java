@@ -49,6 +49,7 @@ public class BookService {
 		bookEntity.setBank(book.getBank());
 		bookEntity.setAccount(book.getAccount());
 		bookEntity.setUrl(book.getUrl());
+		bookEntity.setPrice(book.getPrice());
 		return bookEntity;
 	} // 함수 종료 => 트랜잭션 종료 => 영속화 되어있는 데이터를 DB로 갱신(flush) => commit    ======> 더티체킹
 	

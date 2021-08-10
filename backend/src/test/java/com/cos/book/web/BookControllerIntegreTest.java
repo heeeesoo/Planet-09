@@ -65,7 +65,7 @@ public class BookControllerIntegreTest {
 	@Test
 	public void save_테스트() throws Exception {
 		// given (테스트를 하기 위한 준비)
-		Book book = new Book(null, "스프링 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1");
+		Book book = new Book(null, "스프링 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2");
 		String content = new ObjectMapper().writeValueAsString(book);
 
 		// when (테스트 실행)
@@ -81,9 +81,9 @@ public class BookControllerIntegreTest {
 	public void findAll_테스트() throws Exception {
 		// given
 		List<Book> books = new ArrayList<>();
-		books.add(new Book(null, "스프링부트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
-		books.add(new Book(null, "리엑트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
-		books.add(new Book(null, "JUnit 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
+		books.add(new Book(null, "스프링부트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
+		books.add(new Book(null, "리엑트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
+		books.add(new Book(null, "JUnit 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
 		bookRepository.saveAll(books);
 
 		// when
@@ -101,9 +101,9 @@ public class BookControllerIntegreTest {
 		Long id = 2L;
 
 		List<Book> books = new ArrayList<>();
-		books.add(new Book(null, "스프링부트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
-		books.add(new Book(null, "리엑트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
-		books.add(new Book(null, "JUnit 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
+		books.add(new Book(null, "스프링부트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
+		books.add(new Book(null, "리엑트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
+		books.add(new Book(null, "JUnit 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
 		bookRepository.saveAll(books);
 
 		// when
@@ -119,12 +119,12 @@ public class BookControllerIntegreTest {
 		// given
 		Long id = 3L;
 		List<Book> books = new ArrayList<>();
-		books.add(new Book(null, "스프링부트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
-		books.add(new Book(null, "리엑트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
-		books.add(new Book(null, "JUnit 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1"));
+		books.add(new Book(null, "스프링부트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
+		books.add(new Book(null, "리엑트 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
+		books.add(new Book(null, "JUnit 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2"));
 		bookRepository.saveAll(books);
 
-		Book book = new Book(null, "C++ 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1");
+		Book book = new Book(null, "C++ 따라하기", "코스","의류","asd","11-11-11","11-11-11","11-11-11","신한","123","1","2");
 		String content = new ObjectMapper().writeValueAsString(book);
 
 		// when
