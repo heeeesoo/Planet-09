@@ -15,6 +15,7 @@ const SaveForm = (props) => {
     bank : '',
     account : '',
     url :'',
+    price:'',
   });
 
   
@@ -89,7 +90,17 @@ const SaveForm = (props) => {
         />
       </Form.Group>
 
-     
+      <Form.Group controlId="formBasicEmail">
+        <Form.Label>가격</Form.Label>
+        <Form.Control
+          type="text"
+          placeholder="가격을 입력하세요."
+          onChange={changeValue}
+          name="price"
+        />
+      </Form.Group>
+
+    {/*
       <Form.Group controlId="formBasicEmail">
       <Form.Label>분야</Form.Label>
       <Form>
@@ -146,7 +157,7 @@ const SaveForm = (props) => {
           ))}
         </Form>
         </Form.Group>
-        
+        */}
 
         <Form.Group controlId="formFile" className="mb-3">
        <Form.Label>대표이미지</Form.Label>

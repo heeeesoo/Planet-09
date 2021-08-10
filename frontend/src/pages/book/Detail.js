@@ -22,6 +22,7 @@ const Detail = (props) => {
     bank: '',
     account: '',
     url:'',
+    price:'',
   });
 
   useEffect(() => {
@@ -113,6 +114,7 @@ const Detail = (props) => {
 
       <div className = "item_4_2">
       <hr/>
+        <h4>가격 : {book.price}</h4>
         <h4>공구 시작일 : {book.startDate}</h4>
         <h4>마감 날짜 : {book.endDate}</h4>
         <h4>수요조사 참여자 결제 마감일 : {book.payDate}</h4>

@@ -60,7 +60,7 @@ function Header(props){
 
 function Profile(){
     return(
-        <Link to = "/myPage">
+        <Link to = "/buyHome/buy">
             <button id = "image_button"><img src={user_image} alt="유저이미지"/></button>
         </Link>
     )
@@ -68,7 +68,7 @@ function Profile(){
 
 function UserName(){
     return(
-        <Link to = "/myPage" className = "top_button">
+        <Link to = "/buyHome/buy" className = "top_button">
             칼라왈츠
         </Link>
     )
